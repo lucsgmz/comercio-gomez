@@ -1,14 +1,12 @@
 //@ts-check
 import React from "react";
 import logo from "../Img/logo.png";
-import carrito from "../Img/carrito.png";
 import menu from "../Img/menu.png"
 import "../Components/NavBar.css"
 import CartWidget from "./CartWidget";
 
 function NavBar() {
   return (
-    <div>
     <nav className="bg-black py-6 relative">
       <div className="container mx-auto flex px-8 xl:px-0">
         <div className="flex flex-grow items-center">
@@ -46,9 +44,8 @@ function NavBar() {
           </div>
         </div>
       </div>
-    </nav>
-    <div className="imagen"></div>
-    </div>
+    </nav>   
+
   );
 }
 
