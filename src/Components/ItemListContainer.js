@@ -1,9 +1,9 @@
 import React from "react";
-import guantes from "../Img/guantes.webp";
-function ItemListContainer({ title, price }) {
+import guantes from "./Img/guantes.webp";
+function ItemListContainer({ title, price  }) {
   return (
-    <div className="itemListContainer">
-      <div className="container mx-auto flex px-8">
+    <div className="itemListContainer"> 
+        <div className="container mx-auto flex px-8">
         <div className="max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-400/40 dark:border-gray-700 m-8">
           <div className="p-8 rounded-t-lg">
             <img src={guantes} alt="guantes" />

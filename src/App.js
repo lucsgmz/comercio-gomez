@@ -1,8 +1,7 @@
-import NavBar from './Components/NavBar'
+import NavBar from './Components/NavBar/NavBar.jsx'
 import './App.css';
-import ItemListContainer from './Components/ItemListContainer';
-import Principal from './Components/Principal';
-import Saludo from './Components/Saludo.jsx'
+import Principal from './Components/BannerPrincipal/Principal';
+import ItemCount from './Components/ItemCount.js';
 
 
 
@@ -10,11 +9,8 @@ function App() {
   return (
     <div>
       <NavBar/>
-      <Saludo greeting="Bienvenidos a la lista de productos!"/>
-      <ItemListContainer
-            title="★ Driver Gloves | Imperial Plaid (Field-Tested) "         
-            price="$67.900,00"
-          />
+      <Principal/>
+      
     </div>
   );
 }
