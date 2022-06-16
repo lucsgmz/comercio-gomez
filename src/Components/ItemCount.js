@@ -5,7 +5,8 @@ export default function ItemCount({ stock, initial }) {
 
   const increment = () => {
     if (count >= stock) {
-      return;
+      alert('maximo producto permitido')
+      return
     }
     setCount(count + 1);
   };
