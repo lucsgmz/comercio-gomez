@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import awp from "./Img/awp.webp";
-export default function ItemCount({ stock, initial }) {
+export default function ItemCount({ stock, initial, onAdd }) {
   const [count, setCount] = useState(initial);
 
   const increment = () => {
@@ -16,7 +16,7 @@ export default function ItemCount({ stock, initial }) {
     }
     setCount(count - 1);
   };
-  const onAdd = () => {
+  function onAdd() {
     if(count ===0){
       return
     }
@@ -45,7 +45,7 @@ export default function ItemCount({ stock, initial }) {
               {count}
             </p>
             <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onClick={increment}>+</button>
-            <button onClick={onAdd} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Agregar</button>
+            <button onClick={() => onAdd(count) }className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Agregar</button>
           </div>
           
         </div>

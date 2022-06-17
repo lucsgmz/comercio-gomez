@@ -14,7 +14,7 @@ function Principal() {
           <ItemCount
           stock={10}
           initial={1}
-          onAdda = {"agregado"}
+          onAdd={"onAdd"}
           />
     </div>
   );
