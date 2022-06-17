@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import awp from "./Img/awp.webp";
-export default function ItemCount({ stock, initial }) {
+export default function ItemCount({ stock, initial, onAdd }) {
   const [count, setCount] = useState(initial);
 
   const increment = () => {
@@ -16,6 +16,12 @@ export default function ItemCount({ stock, initial }) {
     }
     setCount(count - 1);
   };
+  const onAdda = () => {
+    if(count ===0){
+      return
+    }
+    setCount(0)
+  }
 
   return (
     <div className="container mx-auto flex px-8">
@@ -34,9 +40,11 @@ export default function ItemCount({ stock, initial }) {
               $10,000
             </span>
             <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onClick={decrement}>-</button>
-            <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onClick={increment}>
-              Agregar a carrito: {count}
-            </button>
+            <p className="text-white bg-blue-700  focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:bg-blue-600 ">
+              {count}
+            </p>
+            <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onClick={increment}>+</button>
+            <button onClick={onAdda} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">{onAdd}RESET</button>
           </div>
           
         </div>

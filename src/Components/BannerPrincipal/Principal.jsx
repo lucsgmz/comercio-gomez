@@ -13,7 +13,8 @@ function Principal() {
           />
           <ItemCount
           stock={10}
-          initial={1}/>
+          initial={1}
+          onAdd={true}/>
     </div>
   );
 }
