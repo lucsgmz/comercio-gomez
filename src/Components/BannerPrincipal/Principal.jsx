@@ -7,6 +7,7 @@ import ItemCount from '../ItemCount';
 function Principal() {
   return (
     <div className="imagen">
+      <ItemCount initial={1} stock={5} onAdd/>
       <ItemListContainer/>
       
     </div>
