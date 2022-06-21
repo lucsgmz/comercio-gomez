@@ -1,5 +1,4 @@
-import React, {useEffect, useState} from "react";
-import guantes from "../Img/guantes.webp";
+import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 
 export default function ItemListContainer() {
