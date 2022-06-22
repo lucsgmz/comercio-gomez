@@ -3,3 +3,12 @@
     width: 100%;
     height: 100vh;
 }
+.backgroundNav{
+    background-color: #000;
+}
+.navItemColor{
+    color: #d8dbde;
+}
+.navItemColor:hover{
+    color:grey
+}

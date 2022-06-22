@@ -15,7 +15,7 @@ function NavBar() {
 }
   return (
     <div>
-    <nav className="bg-black py-6 relative">
+    <nav className=" backgroundNav py-6 relative">
       <div className="container mx-auto flex px-8 xl:px-0">
         <div className="flex flex-grow items-center">
           <img src={logo} alt="" />
@@ -30,19 +30,19 @@ function NavBar() {
           <div className="flex flex-col lg:flex-row mb-6 lg:mb-0">
             <a
               href="#"
-              className="text-gray-300 lg:mr-7 mb-6 lg:mb-0 font-mono hover:text-stone-600 focus:outline-none"
+              className="navItemColor lg:mr-7 mb-6 lg:mb-0 font-mono focus:outline-none"
             >
               Home
             </a>
             <a
               href="#"
-              className="text-gray-300 lg:mr-7 mb-6 lg:mb-0 font-mono hover:text-stone-600 focus:outline-none"
+              className="navItemColor lg:mr-7 mb-6 lg:mb-0 font-mono  focus:outline-none"
             >
               Tienda
             </a>
             <a
               href="#"
-              className="text-gray-300 lg:mr-7 mb-6 lg:mb-0 font-mono hover:text-stone-600 focus:outline-none"
+              className="navItemColor lg:mr-7 mb-6 lg:mb-0 font-mono focus:outline-none"
             >
               Contacto
             </a>

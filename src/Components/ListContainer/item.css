@@ -1,0 +1,10 @@
+.backgroundCard{
+    background-color: rgb(156 163 175 / 0.4);
+    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+.textCard{
+    color: #000
+}
+.priceCard{
+    color: #00002F
+}
