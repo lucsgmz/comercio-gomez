@@ -1,0 +1,63 @@
+[
+    {
+        "id": 1,
+        "name": "★ Driver Gloves | Imperial Plaid (Field-Tested)",
+        "price": "67.900",
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit..",
+        "img" : "../Img/guantes.webp"
+    },
+    {
+        "id": 2,
+        "name": "StatTrak™ AWP | Hyper Beas (Well-Worn)",
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit..",
+        "price ": "$67.900,00"
+    },
+    {
+        "id": 3,
+        "name": "StatTrak™ M4A4 | Cyber Security (Field-Tested)",
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit..",
+        "price ": "$67.900,00"
+    },
+    {
+        "id": 4,
+        "name": "★ StatTrak™ Ursus Knife | Doppler Phase 1 (Factory New)",
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit..",
+        "price ": "$67.900,00"
+    },
+    {
+        "id": 5,
+        "name": "★ Falchion Knife | Tiger Tooth (Factory New)",
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit..",
+        "price ": "$67.900,00"
+    },
+    {
+        "id": 6,
+        "name": "AWP | Neo-Noir (Field-Tested)",
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit..",
+        "price ": "$67.900,00"
+    },
+    {
+        "id": 7,
+        "name": "M4A1-S | Chantico's Fire (Field-Tested)",
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit..",
+        "price ": "$67.900,00"
+    },
+    {
+        "id": 8,
+        "name": "AK-47 | Neon Rider (Field-Tested)",
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit..",
+        "price ": "$67.900,00"
+    },
+    {
+        "id": 9,
+        "name": "★ Driver Gloves | Imperial Plaid (Field-Tested)",
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit..",
+        "price ": "$67.900,00"
+    },
+    {
+        "id": 10,
+        "name": "★ Driver Gloves | Imperial Plaid (Field-Tested)",
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit..",
+        "price ": "$67.900,00"
+    }
+]

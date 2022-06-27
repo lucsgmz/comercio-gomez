@@ -1,5 +1,5 @@
 import React from "react";
-import ItemCount from "../ItemCount";
+import ItemCount from "../ItemCount/ItemCount";
 import "./item.css";
 
 
@@ -21,7 +21,7 @@ export default function Item({ id, price, title, pictureUrl }) {
             </h5>
           </div>
 
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center pt-4">
             <span className="priceCard text-3xl font-bold">${price}</span>     
             <ItemCount stock={5} initial={1} onAdd={onAdd}/>          
           </div>

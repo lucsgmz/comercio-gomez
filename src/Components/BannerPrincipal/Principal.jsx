@@ -1,12 +1,12 @@
 //@ts-check
-import ItemListContainer from "../ListContainer/ItemListContainer";
+import ItemDetail from "../itemDetail/ItemDetail";
+import ItemListContainer from "../ItemListContainer/ItemListContainer";
 import "../NavBar/NavBar";
 
 function Principal() {
   return (
     <div className="imagen">
       <ItemListContainer/>
-      
     </div>
   );
 }

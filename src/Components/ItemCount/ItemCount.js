@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import awp from "./Img/awp.webp";
+
 export default function ItemCount({ stock, initial, onAdd }) {
   const [count, setCount] = useState(initial);
 
