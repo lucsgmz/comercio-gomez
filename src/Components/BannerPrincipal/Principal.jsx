@@ -6,7 +6,7 @@ import "../NavBar/NavBar";
 function Principal() {
   return (
     <div className="imagen">
-      <ItemListContainer/>
+      
     </div>
   );
 }

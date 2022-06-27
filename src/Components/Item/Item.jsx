@@ -1,6 +1,7 @@
 import React from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import "./item.css";
+import { Link } from "react-router-dom";
 
 
 export default function Item({ id, price, title, pictureUrl }) {
@@ -23,7 +24,12 @@ export default function Item({ id, price, title, pictureUrl }) {
 
           <div className="flex justify-between items-center pt-4">
             <span className="priceCard text-3xl font-bold">${price}</span>     
-            <ItemCount stock={5} initial={1} onAdd={onAdd}/>          
+            <ItemCount stock={5} initial={1} onAdd={onAdd}/>        
+            <button onClick={onAdd}className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-2 focus:outline-none  font-medium rounded-lg text-sm px-3 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700">
+            <Link to={`/item/${id}`}>
+                        Ver mas
+                    </Link>
+            </button>    
           </div>
         </div>
       </div>
