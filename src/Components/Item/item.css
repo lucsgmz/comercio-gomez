@@ -8,3 +8,20 @@
 .priceCard{
     color: #00002F
 }
+.imgCard{
+    margin-left: 85px
+}
+.linkCard{
+    text-align: center;
+}
+.linkTitle{
+    text-align: center;
+}
+.centrado{
+    margin: auto;
+}
+@media only screen and (max-width: 600px) {
+    .imgCard{
+        margin-left: 15px;
+    }
+  }
