@@ -3,7 +3,7 @@ import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail = ({ id, price, title, status, pictureUrl, details }) => {
   function onAdd() {
-    alert("Producto agregado correctamente");
+    alert("Producto agregado correctamente: " + title);
     return;
   }
   return (

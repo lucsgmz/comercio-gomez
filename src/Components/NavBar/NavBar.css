@@ -1,4 +1,6 @@
-
+.dropdown:hover .dropdown-menu {
+    display: block;
+  }
 .backgroundNav{
     background-color: #000;
 }
@@ -7,4 +9,13 @@
 }
 .navItemColor:hover{
     color:grey
+}
+.dropMenu{
+    padding-top: 1rem;
+padding-bottom: 1rem;
+padding-left: 0.5rem;
+padding-right: 0.5rem;
+}
+.dropMenu li{
+    padding: 0.5rem;
 }

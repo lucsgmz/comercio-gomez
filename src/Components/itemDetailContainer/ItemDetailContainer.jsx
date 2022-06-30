@@ -12,7 +12,7 @@ export default function ItemDetailContainer() {
       {
         id: 1,
         title: "★ Driver Gloves | Imperial Plaid  ",
-        status: "(Field-Tested)",
+        category: "(Field-Tested)",
         price: 500,  
         pictureUrl:
           "https://static.wixstatic.com/media/80c5f0_14449f8b8a5641e4959c5f1bae47c51e~mv2.png/v1/fill/w_153,h_115,al_c,q_85,usm_0.66_1.00_0.01/80c5f0_14449f8b8a5641e4959c5f1bae47c51e~mv2.webp",
@@ -51,7 +51,7 @@ export default function ItemDetailContainer() {
       },
       {
         id: 6,
-        name: "AWP | Neo-Noir (Field-Tested)",
+        name: "AWP | Neo-Noir",
         status: "(Field-Tested)",
         pictureUrl:
           "https://static.wixstatic.com/media/80c5f0_f0832452044e47b98ba7bf6238018268~mv2.png/v1/fill/w_153,h_115,al_c,q_85,usm_0.66_1.00_0.01/80c5f0_f0832452044e47b98ba7bf6238018268~mv2.webp",
