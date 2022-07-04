@@ -12,7 +12,7 @@ export default function ItemDetailContainer() {
       {
         id: 1,
         title: "★ Driver Gloves | Imperial Plaid  ",
-        category: "(Field-Tested)",
+        status: "(Field-Tested)",
         price: 500,  
         pictureUrl:
           "https://static.wixstatic.com/media/80c5f0_14449f8b8a5641e4959c5f1bae47c51e~mv2.png/v1/fill/w_153,h_115,al_c,q_85,usm_0.66_1.00_0.01/80c5f0_14449f8b8a5641e4959c5f1bae47c51e~mv2.webp",
@@ -20,7 +20,7 @@ export default function ItemDetailContainer() {
       {
         id: 2,
         title: "StatTrak™ AWP | Hyper Beast  ",
-        status: "(Well-Worn)",
+        status: "(Field-Tested)",
         price: 600,
         pictureUrl:
           "https://static.wixstatic.com/media/80c5f0_26440b0362ae4c619f1c236f028189ae~mv2.png/v1/fill/w_153,h_115,al_c,q_85,usm_0.66_1.00_0.01/80c5f0_26440b0362ae4c619f1c236f028189ae~mv2.webp",
@@ -43,43 +43,43 @@ export default function ItemDetailContainer() {
       },
       {
         id: 5,
-        name: "★ Falchion Knife | Tiger Tooth",
+        title: "★ Falchion Knife | Tiger Tooth",
         status: "(Factory New)",
         pictureUrl:
           "https://static.wixstatic.com/media/eb7755_742688e05b62407a899ca5de489a76b1~mv2.png/v1/fill/w_153,h_115,al_c,q_85,usm_0.66_1.00_0.01/eb7755_742688e05b62407a899ca5de489a76b1~mv2.webp",
-        price: "67.900,00",
+        price: 20000,
       },
       {
         id: 6,
-        name: "AWP | Neo-Noir",
+        title: "AWP | Neo-Noir",
         status: "(Field-Tested)",
         pictureUrl:
           "https://static.wixstatic.com/media/80c5f0_f0832452044e47b98ba7bf6238018268~mv2.png/v1/fill/w_153,h_115,al_c,q_85,usm_0.66_1.00_0.01/80c5f0_f0832452044e47b98ba7bf6238018268~mv2.webp",
-        price: "67.900,00",
+        price: 1560,
       },
       {
         id: 7,
-        name: "M4A1-S | Chantico's Fire",
+        title: "M4A1-S | Chantico's Fire",
         status: "(Field-Tested)",
         pictureUrl:
           "https://static.wixstatic.com/media/80c5f0_0e23733962844fdb9100daf9d2329978~mv2.png/v1/fill/w_153,h_115,al_c,q_85,usm_0.66_1.00_0.01/80c5f0_0e23733962844fdb9100daf9d2329978~mv2.webp",
-        price: "67.900,00",
+        price: 67900,
       },
       {
         id: 8,
-        name: "AK-47 | Neon Rider",
+        title: "AK-47 | Neon Rider",
         status: "(Field-Tested)",
         pictureUrl:
           "https://static.wixstatic.com/media/80c5f0_e8f0dbe71c0e4e09ad5714d27b1af473~mv2.png/v1/fill/w_153,h_115,al_c,q_85,usm_0.66_1.00_0.01/80c5f0_e8f0dbe71c0e4e09ad5714d27b1af473~mv2.webp",
-        price: "67.900,00",
+        price: 5900,
       },
       {
         id: 9,
-        name: "Sir Bloody Miami Darryl | The Professionals",
+        title: "Sir Bloody Miami Darryl | The Professionals",
         status: "Character",
         pictureUrl:
           "https://static.wixstatic.com/media/80c5f0_f9ae0a744ce84df89f693bcb44e19c76~mv2.png/v1/fill/w_153,h_115,al_c,q_85,usm_0.66_1.00_0.01/80c5f0_f9ae0a744ce84df89f693bcb44e19c76~mv2.webp",
-        price: "67.900,00",
+        price: 33000,
       }
     ];
     new Promise((resolve, reject) => {

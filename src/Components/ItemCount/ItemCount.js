@@ -38,7 +38,7 @@ export default function ItemCount({ stock, initial, onAdd }) {
         </button>
         </div>
         <button
-          onClick={onAdd}
+          onClick={() => onAdd(count)}
           className=" inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-indigo-800 dark:hover:bg-green-500 dark:focus:ring-blue-800"
         >
           {" "}
