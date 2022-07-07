@@ -2,18 +2,17 @@ import React from "react";
 import Swal from "sweetalert2";
 import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
-const ItemDetail = ({ id, price, title, status, pictureUrl, details }) => {
+
+
+const ItemDetail = ({ id, price, title, status, pictureUrl, details}) => {
+  const [goToCart, setGoToCart] = useState(false);
+  
   const onAdd = (count) => {
-    let total = count * price;
-    return Swal.fire({
-      title: `${count} ${title}|| Total: $${total}`,
-      text: ` Estado: ${status} `,
-      imageUrl: pictureUrl,
-      imageWidth: 200,
-      imageHeight: 150,
-      imageAlt: `${title}`,
-    });
+    setGoToCart(true);
+
+    
   };
 
   return (
@@ -44,21 +43,17 @@ const ItemDetail = ({ id, price, title, status, pictureUrl, details }) => {
               </h4>
             </div>
             <div className="pt-5">
-              <ItemCount
-                stock={5}
-                initial={1}
-                onAdd={onAdd}
-                details={details}
-              />
-            </div>
-            <div className="mt-8">
-            <Link to={`/cart`}>
-              <button class="relative w-full inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
-                <span class="relative w-full px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                  Finalizar
-                </span>
-              </button>
-            </Link>
+           {
+            goToCart
+            ?           <Link to={`/cart`}>
+            <button class="relative w-full inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+              <span class="relative w-full px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                Finalizar compra
+              </span>
+            </button>
+          </Link>
+            : <ItemCount initial={1} stock={5} onAdd={onAdd}/>
+           }
             </div>
           </div>
         </div>

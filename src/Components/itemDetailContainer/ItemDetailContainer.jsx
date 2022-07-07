@@ -1,4 +1,3 @@
-import productsData from "../productsData/weapons.json";
 import ItemDetail from "../itemDetail/ItemDetail";
 import { React, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";

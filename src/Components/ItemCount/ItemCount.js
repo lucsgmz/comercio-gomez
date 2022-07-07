@@ -11,7 +11,7 @@ export default function ItemCount({ stock, initial, onAdd }) {
     setCount(count + 1);
   };
   const decrement = () => {
-    if (count <= 0) {
+    if (count <= 1) {
       return;
     }
     setCount(count - 1);
