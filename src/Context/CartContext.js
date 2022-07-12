@@ -1,8 +1,7 @@
-import React, { createContext, useState, useContext } from 'react'
+import React, { createContext, useState} from 'react'
 
-const DataContext = createContext([]);
+export const DataContext = createContext([]);
 
-export const useCartContext = () => useContext(CartContext)
 
 export default function CartContext({children}) {
 
