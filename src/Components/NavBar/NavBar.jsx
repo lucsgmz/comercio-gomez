@@ -39,7 +39,7 @@ function NavBar() {
               
                 <div className="dropdown">
                   <button className=" navItemColor lg:mr-7 mb-6 lg:mb-0 font-mono focus:outline-none">
-                    <span className="">ESTADO</span>
+                    <span className="">Estado</span>
                     <svg
                       className="fill-current h-4 w-4 inline-block"
                       xmlns="http://www.w3.org/2000/svg"
@@ -54,12 +54,12 @@ function NavBar() {
                   </ul>
                 </div>
               
-              <a
+              <Link to ={`/`}
                 href="#"
                 className="navItemColor lg:mr-7 mb-6 lg:mb-0 font-mono focus:outline-none"
               >
                 Contacto
-              </a>
+              </Link>
             </div>
             <div>
               <CartWidget />

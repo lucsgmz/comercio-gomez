@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import ItemDetail from "../itemDetail/ItemDetail";
 
-export default function ItemCount({ stock, initial, onAdd }) {
+
+export default function ItemCount({ stock, initial, onAdd}) {
   const [count, setCount] = useState(initial);
 
   const increment = () => {
@@ -17,6 +17,7 @@ export default function ItemCount({ stock, initial, onAdd }) {
     }
     setCount(count - 1);
   };
+  
 
   return (
     <>

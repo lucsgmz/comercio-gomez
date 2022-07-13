@@ -27,7 +27,8 @@ export default function CartContext({children}) {
         clearCart,
         isInCart,
         removeProduct,
-        addProduct
+        addProduct,
+        cart
     }}>
         {children}
     </DataContext.Provider>
