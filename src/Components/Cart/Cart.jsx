@@ -4,16 +4,17 @@ import { DataContext } from "../../Context/CartContext";
 import { Link } from "react-router-dom";
 
 export default function Cart() {
-  const { cart, clearCart,  removeProduct} = useContext(DataContext);
+  const { cart,  removeProduct, totalItems} = useContext(DataContext);
   return (
     <>
       <div className="container mx-auto mt-10">
+      <div class="flex justify-between border-b pb-8">
+                <h1 class="font-semibold text-2xl">Finalizando compra</h1>
+              </div>
         {cart.map((row) => (
           <div class="flex shadow-md my-10" key={row.id}>
             <div class="w-3/4 bg-white px-10 py-10" >
-              <div class="flex justify-between border-b pb-8">
-                <h1 class="font-semibold text-2xl">Finalizando compra</h1>
-              </div>
+              
               <div class="flex mt-10 mb-5">
                 <h3 class="font-semibold text-gray-600 text-xs uppercase w-2/5">
                   Productos
@@ -34,7 +35,7 @@ export default function Cart() {
                     <span class="font-bold text-sm">{row.title}</span>
                     <span class="text-red-500 text-xs">{row.status}</span>
                     <button
-                      onClick={removeProduct}
+                      onClick={() => removeProduct(row.id)}
                       class="font-semibold hover:text-red-500 text-gray-500 text-xs"
                     >
                       Remove
@@ -43,18 +44,18 @@ export default function Cart() {
                 </div>
                 <div class="flex justify-center w-1/5">
                   <span class="text-center w-1/5 font-semibold text-sm">
-                    {row.count}
+                    {row.cantidad}
                   </span>
                 </div>
                 <span class="text-center w-1/5 font-semibold text-sm">
-                  ${row.price}
+                  $ {row.precio}
                 </span>
                 <span class="text-center w-1/5 font-semibold text-sm">
                  
                 </span>
               </div>
 
-              <Link to={`/`}
+              <Link to={"/"}
               class="flex font-semibold text-indigo-600 text-sm mt-10"
               >
                 <svg
@@ -73,12 +74,16 @@ export default function Cart() {
               </h1>
               <div class="flex justify-between mt-10 mb-5">
                 <span class="font-semibold text-sm uppercase">{row.title}</span>
-                <span class="font-semibold text-sm">x {row.count}</span>
+                <span class="font-semibold text-sm">x {row.cantidad}</span>
               </div>
               <div class="border-t mt-8">
+              <div class="flex font-semibold justify-between py-6 text-sm uppercase">
+                  <span>Total product</span>
+                  <span> {totalItems(cart)}</span>
+                </div>
                 <div class="flex font-semibold justify-between py-6 text-sm uppercase">
                   <span>Total cost</span>
-                  <span> ${row.price * row.count}</span>
+                  <span> $ {cart.reduce((p,c) => p + c.precio ,0)}</span>
                 </div>
                 <button class="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">
                   Checkout

@@ -7,20 +7,31 @@ export default function CartContext({children}) {
 
     const [cart, setCart] = useState([]);
 
-    const addProduct = (item, count) =>{
-        const newCart = cart.filter(prod => prod.id !== item.id);
-        newCart.push({...item, count: count});
-        setCart(newCart)
-    }
-    console.log('carrito' , cart);
+    const isInCart = (id) => {
+      return cart.find((product) => product.id === id);}
 
+    const addProduct = (item, quantity) =>{
+      console.log(item.id)
+      console.log(!!isInCart(item.id))
+      if (!!isInCart(item.id)){
+        const newCart = cart;
+        const auxCart = newCart.findIndex(product => product.id === item.id);
+        newCart[auxCart]["cantidad"] += quantity;
+        newCart[auxCart]["precio"] += (item.price * quantity)
+        setCart([...newCart]);
+      }else {
+        setCart([...cart, {...item, cantidad:quantity, precio:item.price *quantity}]);
+      }
+      }
+       
     const clearCart = () => setCart([])
 
-    const isInCart = (id) => {
-       return cart.find(product => product.id === id) ? true : false
-      };
+    
+    const removeProduct = (id) => {setCart(cart.filter(product => product.id !== id));}
 
-    const removeProduct = (id) => setCart(cart.filter(product => product.id !== id));
+    function totalItems(cart) {
+      return cart.reduce((prev,next) => prev + next.cantidad, 0);
+    }
 
   return (
     <DataContext.Provider value = {{
@@ -28,7 +39,9 @@ export default function CartContext({children}) {
         isInCart,
         removeProduct,
         addProduct,
-        cart
+        cart, 
+        totalItems
+
     }}>
         {children}
     </DataContext.Provider>

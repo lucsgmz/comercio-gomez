@@ -1,17 +1,27 @@
-//@ts-check
+
 import carrito from "../Img/carrito.png";
+import React from "react";
+import { useContext } from "react";
+import { DataContext } from "../../Context/CartContext";
 
-function CartWidget() {
 
+
+const CartWidget = () => {
+const {totalItems, cart} =useContext(DataContext);
   return (
+    cart.length >= 1 ?(
     <div className="flex flex-col lg:flex-row text-center">
-      <a href="#">
+      <button href="#">
         <img src={carrito} alt="ALGO" />
-       
-      </a>
-    
-      
-    </div>
-  );
+        <p className="bg-white">{totalItems(cart)}</p>
+       </button>
+    </div> ) :( 
+       <div className="flex flex-col lg:flex-row text-center">
+       <button href="#">
+         <img src={carrito} alt="ALGO" />
+        </button>
+     </div>
+    )
+  )
 }
 export default CartWidget
