@@ -13,7 +13,7 @@ const {totalItems, cart} =useContext(DataContext);
     <div className="flex flex-col lg:flex-row text-center">
       <button href="#">
         <img src={carrito} alt="ALGO" />
-        <p className="bg-white">{totalItems(cart)}</p>
+        <p className="bg-red-600">{totalItems(cart)}</p>
        </button>
     </div> ) :( 
        <div className="flex flex-col lg:flex-row text-center">
